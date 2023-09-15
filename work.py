@@ -1,12 +1,27 @@
 #!/usr/bin/python3
 
-import math
+import sys
 
-n = int(input("Enter a number: "))
-
-for t in range(1, n + 1):
-    if True:
-    print("The number is " + str(t) + " its square is " + str(int(math.pow(t, 2))) + " and its cube is " + str(int(math.pow(t, 3))) + ".")
+def main():
+    """
+    This Python code demonstrates the following features:
     
+    * accessing command line arguments.
     
-
+    """
+    try:
+        argCount = len(sys.argv)
+        program = sys.argv[0]
+        arg1 = sys.argv[1]
+        arg2 = sys.argv[2]
+        
+        print("The program name is " + program + ".")
+        print("The number of command line items is " + str(argCount) + ".")
+        print("Command line argument 1 is " + arg1 + ".")
+        print("Command line argument 2 is " + arg2 + ".")
+        
+    except:
+        print("ERROR: An error occurred.")
+    
+if __name__ == "__main__":
+    main()
